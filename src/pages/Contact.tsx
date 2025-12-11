@@ -10,7 +10,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <PageWrapper>
+    <PageWrapper backgroundImage="../Images/bg2.jpg">
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-xl w-full">

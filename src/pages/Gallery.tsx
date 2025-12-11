@@ -11,7 +11,7 @@ const galleryItems = [
 
 const Gallery = () => {
   return (
-    <PageWrapper>
+    <PageWrapper backgroundImage="../Images/bg1.jpg">
       <main className="min-h-screen px-4 py-24 pt-32">
         {/* Title */}
         <h1 className="font-couture text-4xl md:text-6xl tracking-[0.3em] text-foreground text-center mb-16 animate-fade-up">

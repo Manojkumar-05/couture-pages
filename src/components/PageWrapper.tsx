@@ -4,9 +4,15 @@ import Navbar from "./Navbar";
 interface PageWrapperProps {
   children: ReactNode;
   backgroundPlaceholder?: boolean;
+  backgroundImage?: string; // NEW PROP
 }
 
-const PageWrapper = ({ children, backgroundPlaceholder = true }: PageWrapperProps) => {
+const PageWrapper = ({ 
+  children, 
+  backgroundPlaceholder = true,
+  backgroundImage 
+}: PageWrapperProps) => {
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -15,25 +21,25 @@ const PageWrapper = ({ children, backgroundPlaceholder = true }: PageWrapperProp
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background with grain overlay */}
+
       {backgroundPlaceholder && (
         <div className="absolute inset-0 grain-overlay">
-          {/* Placeholder for background image - replace src with actual image */}
+
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-          <div 
+
+          <div
             className="absolute inset-0 opacity-20"
             style={{
-              backgroundImage: "url('/placeholder.svg')",
+              backgroundImage: `url('${backgroundImage || "/placeholder.svg"}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           />
         </div>
       )}
-      
+
       <Navbar />
-      
-      {/* Page content with slide-up animation */}
+
       <div
         className={`relative z-10 transition-all duration-700 ease-out ${
           isVisible 

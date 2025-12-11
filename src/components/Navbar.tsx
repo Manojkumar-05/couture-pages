@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-
+import logo from "../Images/ogo.png"
 const navLinks = [
   { name: "HOME", path: "/" },
   { name: "ABOUT", path: "/about" },
@@ -16,9 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 md:px-12">
       {/* Logo placeholder */}
       <Link to="/" className="flex items-center">
-        <div className="w-12 h-12 border-2 border-foreground/60 flex items-center justify-center text-foreground font-couture text-xl hover:bg-foreground hover:text-background transition-all duration-300">
-          F
-        </div>
+        <img src={logo} className="h-10" alt="" />
       </Link>
 
       {/* Navigation Links */}

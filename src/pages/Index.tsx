@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import { Link } from "react-router-dom";
+import logoFull from "../Images/logoFull.png";
 
 const Index = () => {
   return (
-    <PageWrapper>
+    <PageWrapper backgroundImage="../Images/bg1.jpg">
       <main className="min-h-screen flex flex-col items-center justify-center px-4">
         {/* Welcome text */}
         <p className="font-couture text-sm md:text-base tracking-[0.4em] text-foreground/70 mb-6 animate-fade-up">
@@ -12,10 +13,8 @@ const Index = () => {
         </p>
         
         {/* Logo placeholder - large centered */}
-        <div className="animate-fade-up-delay-1">
-          <h1 className="font-couture text-6xl md:text-8xl lg:text-9xl tracking-[0.15em] text-foreground text-shadow-glow mb-8">
-            FOKUZ
-          </h1>
+        <div className="animate-fade-up-delay-1 w-[60%] m-[3%]">
+          <img src={logoFull} alt="" />
         </div>
         
         {/* Tagline */}
@@ -26,7 +25,7 @@ const Index = () => {
         {/* CTA Button */}
         <div className="animate-fade-up-delay-3">
           <Link to="/about">
-            <Button variant="fokuz" size="xl">
+            <Button variant="fokuz" size="xl" className="rounded-full">
               EXPLORE
             </Button>
           </Link>
