@@ -5,7 +5,7 @@ import bg2 from "../Images/bg2.jpg";
 
 const About = () => {
   return (
-    <PageWrapper backgroundImage={bg2}>
+    <PageWrapper backgroundImage={bg2} showFadedLogo={true}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-4xl w-full">
