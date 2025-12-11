@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
+import bg5 from "../Images/bg5.jpg";
 
 const contactLinks = [
   { name: "MAIL", href: "mailto:hello@fokuz.com" },
@@ -10,7 +11,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <PageWrapper backgroundImage="../Images/bg2.jpg">
+    <PageWrapper backgroundImage={bg5}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-xl w-full">

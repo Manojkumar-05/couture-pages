@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import { Link } from "react-router-dom";
+import bg2 from "../Images/bg2.jpg";
 
 const About = () => {
   return (
-    <PageWrapper backgroundImage="../Images/bg1.jpg">
+    <PageWrapper backgroundImage={bg2}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-4xl w-full">
