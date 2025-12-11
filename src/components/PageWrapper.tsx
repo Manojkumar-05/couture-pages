@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 interface PageWrapperProps {
   children: ReactNode;
   backgroundPlaceholder?: boolean;
-  backgroundImage?: string; // NEW PROP
+  backgroundImage?: string;
 }
 
 const PageWrapper = ({ 
@@ -20,33 +20,35 @@ const PageWrapper = ({
   }, []);
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-
+    <div 
+      className={`min-h-screen bg-background relative overflow-hidden transition-transform duration-700 ease-out ${
+        isVisible 
+          ? "translate-y-0 opacity-100" 
+          : "translate-y-full opacity-0"
+      }`}
+      style={{
+        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)"
+      }}
+    >
       {backgroundPlaceholder && (
         <div className="absolute inset-0 grain-overlay">
-
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `url('${backgroundImage || "/placeholder.svg"}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          {backgroundImage && (
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `url('${backgroundImage}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          )}
         </div>
       )}
 
       <Navbar />
 
-      <div
-        className={`relative z-10 transition-all duration-700 ease-out ${
-          isVisible 
-            ? "opacity-100 translate-y-0" 
-            : "opacity-0 translate-y-full"
-        }`}
-      >
+      <div className="relative z-10">
         {children}
       </div>
     </div>

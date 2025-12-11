@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
+import bg3 from "../Images/bg3.jpg";
 
 const services = [
   "SOCIAL MEDIA MANAGEMENT",
@@ -11,7 +12,7 @@ const services = [
 
 const Service = () => {
   return (
-    <PageWrapper backgroundImage="../Images/bg1.jpg">
+    <PageWrapper backgroundImage={bg3}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-2xl w-full">

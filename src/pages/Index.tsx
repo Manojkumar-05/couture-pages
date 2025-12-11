@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import { Link } from "react-router-dom";
 import logoFull from "../Images/logoFull.png";
+import bg1 from "../Images/bg1.jpg";
 
 const Index = () => {
   return (
-    <PageWrapper backgroundImage="../Images/bg1.jpg">
+    <PageWrapper backgroundImage={bg1}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4">
         {/* Welcome text */}
         <p className="font-couture text-sm md:text-base tracking-[0.4em] text-foreground/70 mb-6 animate-fade-up">
@@ -14,7 +15,7 @@ const Index = () => {
         
         {/* Logo placeholder - large centered */}
         <div className="animate-fade-up-delay-1 w-[60%] m-[3%]">
-          <img src={logoFull} alt="" />
+          <img src={logoFull} alt="FOKUZ Logo" />
         </div>
         
         {/* Tagline */}
