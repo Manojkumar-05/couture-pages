@@ -12,7 +12,7 @@ const services = [
 
 const Service = () => {
   return (
-    <PageWrapper backgroundImage={bg3}>
+    <PageWrapper backgroundImage={bg3} showFadedLogo={true}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-2xl w-full">

@@ -11,7 +11,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <PageWrapper backgroundImage={bg5}>
+    <PageWrapper backgroundImage={bg5} showFadedLogo={true}>
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-xl w-full">
