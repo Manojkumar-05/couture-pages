@@ -9,12 +9,12 @@ const About = () => {
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         {/* Decorative frame */}
         <div className="relative max-w-4xl w-full">
-          {/* Corner decorations */}
+          {/* Corner decorations
           <div className="absolute -top-4 -left-4 w-16 h-16 border-l-2 border-t-2 border-foreground/30" />
           <div className="absolute -top-4 -right-4 w-16 h-16 border-r-2 border-t-2 border-foreground/30" />
           <div className="absolute -bottom-4 -left-4 w-16 h-16 border-l-2 border-b-2 border-foreground/30" />
           <div className="absolute -bottom-4 -right-4 w-16 h-16 border-r-2 border-b-2 border-foreground/30" />
-          
+           */}
           <div className="text-center px-8 py-16">
             {/* Title */}
             <h1 className="font-couture text-4xl md:text-6xl tracking-[0.3em] text-foreground mb-12 animate-fade-up">

@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import Navbar from "./Navbar";
-
+import logo from "../Images/ogo.png"
 interface PageWrapperProps {
   children: ReactNode;
   backgroundPlaceholder?: boolean;
@@ -51,24 +51,7 @@ const PageWrapper = ({
       {/* Faded F Logo in center */}
       {showFadedLogo && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <svg
-            viewBox="0 0 200 200"
-            className="w-[60vh] h-[60vh] opacity-[0.08]"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="4"
-          >
-            {/* Outer rounded rectangle */}
-            <rect x="20" y="20" width="160" height="160" rx="20" ry="20" className="stroke-foreground" />
-            {/* F shape */}
-            <path
-              d="M70 50 L70 150 M70 50 L130 50 M70 100 L115 100"
-              className="stroke-foreground"
-              strokeWidth="12"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <img src={logo} className="w-[75vh] h-[75vh] opacity-[0.08]" />
         </div>
       )}
 
