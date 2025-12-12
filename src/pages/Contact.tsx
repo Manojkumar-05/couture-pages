@@ -3,10 +3,10 @@ import PageWrapper from "@/components/PageWrapper";
 import bg5 from "../Images/bg5.jpg";
 
 const contactLinks = [
-  { name: "MAIL", href: "mailto:hello@fokuz.com" },
-  { name: "INSTAGRAM", href: "https://instagram.com" },
-  { name: "LINKED IN", href: "https://linkedin.com" },
-  { name: "WHATSAPP", href: "https://wa.me/" },
+  { name: "MAIL", href: "mailto:fokuz2k25@gmail.com" },
+  { name: "INSTAGRAM", href: "https://www.instagram.com/fokuz.z?igsh=aTB0Y3p0ajMwNWp4" },
+  { name: "LINKED IN", href: "https://www.linkedin.com/company/fokuz2k25/" },
+  { name: "WHATSAPP", href: "https://wa.me/919944074505" },
 ];
 
 const Contact = () => {

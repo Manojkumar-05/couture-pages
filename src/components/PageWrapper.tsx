@@ -51,14 +51,18 @@ const PageWrapper = ({
       }}
     >
       {backgroundPlaceholder && backgroundImage && bgLoaded && (
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url('${backgroundImage}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <>
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('${backgroundImage}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          {/* Overlay for better content readability */}
+          <div className="absolute inset-0 bg-background/40" />
+        </>
       )}
 
       {/* Faded F Logo in center */}
