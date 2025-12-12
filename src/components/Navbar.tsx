@@ -30,14 +30,11 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={cn(
-                "font-couture text-sm tracking-[0.2em] text-foreground/80 hover:text-foreground transition-colors duration-300 relative",
+                "font-couture text-sm tracking-[0.2em] text-foreground/80 hover:text-outline transition-colors duration-300 relative",
                 location.pathname === link.path && "text-foreground"
               )}
             >
               {link.name}
-              {location.pathname === link.path && (
-                <span className="absolute -bottom-1 left-0 w-full h-px bg-foreground" />
-              )}
             </Link>
           ))}
         </div>

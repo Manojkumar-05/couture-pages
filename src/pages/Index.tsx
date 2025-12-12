@@ -26,7 +26,7 @@ const Index = () => {
         {/* CTA Button */}
         <div className="animate-fade-up-delay-3">
           <Link to="/about">
-            <Button variant="fokuz" size="xl" className="rounded-full">
+            <Button variant="fokuz" size="xl" className="rounded-md">
               EXPLORE
             </Button>
           </Link>

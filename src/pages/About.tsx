@@ -24,11 +24,7 @@ const About = () => {
             {/* Description */}
             <div className="space-y-6 max-w-3xl mx-auto">
               <p className="font-couture text-xs md:text-sm tracking-[0.15em] leading-relaxed text-foreground/90 animate-fade-up-delay-1">
-                AT FOKUZ, WE BRING BRANDS TO LIFE THROUGH THE POWER OF CINEMATIC STORYTELLING. WE SPECIALIZE IN BRAND MARKETING BY CRAFTING HIGH-END, DOCUMENTARY-STYLE, ADVERTISEMENT-STYLE, OR VIDEOS THAT AUTHENTICALLY SHOWCASE YOUR STORY, VALUES, AND VISION.
-              </p>
-              
-              <p className="font-couture text-xs md:text-sm tracking-[0.15em] leading-relaxed text-foreground/90 animate-fade-up-delay-2">
-                OUR APPROACH BLENDS CREATIVITY WITH STRATEGY, ENSURING EVERY FRAME NOT ONLY LOOKS STUNNING BUT ALSO DRIVES ENGAGEMENT AND BUILDS TRUST.
+                AT FOKUZ, WE BRING BRANDS TO LIFE THROUGH THE POWER OF CINEMATIC STORYTELLING. WE SPECIALIZE IN BRAND MARKETING BY CRAFTING HIGH-END, DOCUMENTARY-STYLE, ADVERTISEMENT-STYLE, OR VIDEOS THAT AUTHENTICALLY SHOWCASE YOUR STORY, VALUES, AND VISION. OUR APPROACH BLENDS CREATIVITY WITH STRATEGY, ENSURING EVERY FRAME NOT ONLY LOOKS STUNNING BUT ALSO DRIVES ENGAGEMENT AND BUILDS TRUST.
               </p>
               
               <p className="font-couture text-xs md:text-sm tracking-[0.15em] leading-relaxed text-foreground/90 animate-fade-up-delay-3">
@@ -39,7 +35,7 @@ const About = () => {
             {/* CTA Button */}
             <div className="mt-12 animate-fade-up-delay-4">
               <Link to="/service">
-                <Button variant="fokuz" size="lg">
+                <Button variant="fokuz" size="lg" className="rounded-md">
                   SERVICES
                 </Button>
               </Link>
