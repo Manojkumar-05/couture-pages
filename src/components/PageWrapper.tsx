@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import logo from "../Images/ogo.png"
+import logo from "../Images/ogo.png";
+
 interface PageWrapperProps {
   children: ReactNode;
   backgroundPlaceholder?: boolean;
@@ -14,28 +15,45 @@ const PageWrapper = ({
   backgroundImage,
   showFadedLogo = false
 }: PageWrapperProps) => {
-
   const [isVisible, setIsVisible] = useState(false);
+  const [bgLoaded, setBgLoaded] = useState(false);
 
+  // Preload background image
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    if (backgroundImage) {
+      const img = new Image();
+      img.src = backgroundImage;
+      img.onload = () => setBgLoaded(true);
+    } else {
+      setBgLoaded(true);
+    }
+  }, [backgroundImage]);
+
+  // Trigger slide-up animation after bg is loaded
+  useEffect(() => {
+    if (bgLoaded) {
+      // Small delay to ensure smooth animation start
+      const timer = setTimeout(() => setIsVisible(true), 50);
+      return () => clearTimeout(timer);
+    }
+  }, [bgLoaded]);
 
   return (
     <div 
-      className={`min-h-screen bg-background relative overflow-hidden transition-transform duration-700 ease-out ${
+      className={`fixed inset-0 bg-background overflow-hidden transition-transform duration-700 ${
         isVisible 
-          ? "translate-y-0 opacity-100" 
-          : "translate-y-full opacity-0"
+          ? "translate-y-0" 
+          : "translate-y-full"
       }`}
       style={{
-        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)"
+        transitionTimingFunction: "cubic-bezier(0.33, 1, 0.68, 1)",
+        zIndex: 10
       }}
     >
       {backgroundPlaceholder && (
         <div className="absolute inset-0 grain-overlay">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-          {backgroundImage && (
+          {backgroundImage && bgLoaded && (
             <div
               className="absolute inset-0 opacity-20"
               style={{
@@ -51,13 +69,13 @@ const PageWrapper = ({
       {/* Faded F Logo in center */}
       {showFadedLogo && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <img src={logo} className="w-[75vh] h-[75vh] opacity-[0.08]" />
+          <img src={logo} className="w-[75vh] h-[75vh] opacity-[0.08]" alt="" />
         </div>
       )}
 
       <Navbar />
 
-      <div className="relative z-10">
+      <div className="relative z-10 h-full overflow-auto">
         {children}
       </div>
     </div>
