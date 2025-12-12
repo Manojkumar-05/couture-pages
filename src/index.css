@@ -70,6 +70,11 @@
   
   body {
     @apply bg-background text-foreground font-couture antialiased;
+    font-style: normal;
+  }
+  
+  * {
+    font-style: normal;
   }
 }
 
