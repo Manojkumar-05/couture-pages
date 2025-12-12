@@ -2,16 +2,16 @@ import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import bg3 from "../Images/bg3.jpg";
 import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const services = [
-  { name: "SOCIAL MEDIA MANAGEMENT", path: "/service/social-media-management" },
-  { name: "PROMO SHOOTING", path: "/service/promo-shooting" },
-  { name: "BRAND DESIGNING", path: "/service/brand-designing" },
-  { name: "PODCAST SHOOTING", path: "/service/podcast-shooting" },
-  { name: "WEBSITE BUILDING", path: "/service/website-building" },
+  "CUSTOM WEBSITE DEVELOPMENT",
+  "E-COMMERCE SOLUTIONS",
+  "LANDING PAGES",
+  "WEBSITE MAINTENANCE",
 ];
 
-const Service = () => {
+const WebsiteBuilding = () => {
   const navigate = useNavigate();
 
   return (
@@ -19,23 +19,27 @@ const Service = () => {
       <main className="min-h-screen flex flex-col items-center justify-center px-4 py-24">
         <div className="relative max-w-2xl w-full">
           <div className="text-center px-8 py-12">
-            <h1 className="font-couture text-4xl md:text-6xl tracking-[0.3em] text-foreground mb-12 animate-fade-up">
-              SERVICES
+            <button 
+              onClick={() => navigate('/service')}
+              className="absolute top-0 left-0 text-foreground/70 hover:text-foreground transition-colors flex items-center gap-2 font-couture text-sm tracking-wider"
+            >
+              <ArrowLeft size={18} />
+              BACK
+            </button>
+            
+            <h1 className="font-couture text-3xl md:text-5xl tracking-[0.3em] text-foreground mb-12 animate-fade-up">
+              WEBSITE BUILDING
             </h1>
             
             <div className="space-y-4">
               {services.map((service, index) => (
                 <div
-                  key={service.name}
+                  key={service}
                   className="animate-fade-up"
                   style={{ animationDelay: `${0.1 * (index + 1)}s`, opacity: 0 }}
                 >
-                  <Button 
-                    variant="contact" 
-                    size="full"
-                    onClick={() => navigate(service.path)}
-                  >
-                    {service.name}
+                  <Button variant="contact" size="full">
+                    {service}
                   </Button>
                 </div>
               ))}
@@ -47,4 +51,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default WebsiteBuilding;

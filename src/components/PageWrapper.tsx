@@ -50,20 +50,15 @@ const PageWrapper = ({
         zIndex: 10
       }}
     >
-      {backgroundPlaceholder && (
-        <div className="absolute inset-0 grain-overlay">
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-          {backgroundImage && bgLoaded && (
-            <div
-              className="absolute inset-0 opacity-20"
-              style={{
-                backgroundImage: `url('${backgroundImage}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-          )}
-        </div>
+      {backgroundPlaceholder && backgroundImage && bgLoaded && (
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('${backgroundImage}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
       )}
 
       {/* Faded F Logo in center */}

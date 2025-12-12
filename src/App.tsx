@@ -10,6 +10,11 @@ import Service from "./pages/Service";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SocialMediaManagement from "./pages/SocialMediaManagement";
+import PromoShooting from "./pages/PromoShooting";
+import BrandDesigning from "./pages/BrandDesigning";
+import PodcastShooting from "./pages/PodcastShooting";
+import WebsiteBuilding from "./pages/WebsiteBuilding";
 
 // Preload all background images
 import bg1 from "./Images/bg1.jpg";
@@ -40,6 +45,11 @@ const AppRoutes = () => {
       <Route path="/" element={<Index />} />
       <Route path="/about" element={<About />} />
       <Route path="/service" element={<Service />} />
+      <Route path="/service/social-media-management" element={<SocialMediaManagement />} />
+      <Route path="/service/promo-shooting" element={<PromoShooting />} />
+      <Route path="/service/brand-designing" element={<BrandDesigning />} />
+      <Route path="/service/podcast-shooting" element={<PodcastShooting />} />
+      <Route path="/service/website-building" element={<WebsiteBuilding />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
